@@ -2,7 +2,7 @@ require_relative 'lib/rubocop/packaging/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "rubocop-packaging"
-  spec.version       = Rubocop::Packaging::VERSION
+  spec.version       = RuboCop::Packaging::VERSION
   spec.authors       = ["Dana Sherson"]
   spec.email         = ["robot@dana.sh"]
 
@@ -26,4 +26,7 @@ Gem::Specification.new do |spec|
   spec.bindir        = "exe"
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ["lib"]
+
+  spec.add_runtime_dependency 'rubocop'
 end
+
